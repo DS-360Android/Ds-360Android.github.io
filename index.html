@@ -30,7 +30,7 @@ animation:moveBg 20s linear infinite;
 100%{background-position:80px 80px,80px 100px,100px 60px,60px 80px;}
 }
 
-/* 霓虹光（已修正） */
+/* 霓虹光 */
 body::before{
 content:"";
 position:fixed;
@@ -120,14 +120,6 @@ border-radius:10px;
 margin:10px 0;
 }
 
-/* 地圖 */
-iframe{
-width:100%;
-height:260px;
-border-radius:12px;
-border:0;
-}
-
 /* 浮動按鈕 */
 .floating{
 position:fixed;
@@ -159,7 +151,6 @@ font-weight:bold;
 <a href="tel:0963586591" class="btn call">📞 立即預約</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" target="_blank" class="btn line">💬 LINE詢問</a>
 
-<!-- 商家頁 -->
 <a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" target="_blank" class="btn map">
 📍 查看店家
 </a>
@@ -176,11 +167,31 @@ font-weight:bold;
 </a>
 </section>
 
+<!-- 🔥 關鍵：不再用iframe -->
 <section>
 <h2>📍 店面位置</h2>
 
-<!-- ✅ 穩定地圖（用地址，不會被擋） -->
-<iframe src="https://www.google.com/maps?q=台中市西屯區福上巷214弄55號&output=embed"></iframe>
+<a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" target="_blank" style="text-decoration:none;">
+    
+<div style="
+height:260px;
+border-radius:12px;
+background:linear-gradient(135deg,#111,#000);
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+border:1px solid rgba(0,224,255,0.2);
+box-shadow:0 0 30px rgba(0,224,255,0.15);
+">
+
+<div style="font-size:40px;">📍</div>
+<div style="margin-top:10px;font-size:18px;">點擊開啟導航</div>
+<div style="font-size:14px;color:#aaa;">DS汽車安卓影音科技</div>
+
+</div>
+
+</a>
 
 <br><br>
 
