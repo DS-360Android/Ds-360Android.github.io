@@ -4,80 +4,196 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>台中安卓機推薦｜DS汽車安卓影音科技｜360環景・CarPlay</title>
+<title>台中安卓機推薦｜DS汽車安卓影音科技</title>
 
-<meta name="description" content="台中安卓機推薦，DS汽車安卓影音科技，專業安裝安卓車機、360環景、CarPlay、行車記錄器，快速安裝、價格透明。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
 body{
 margin:0;
 font-family:"Noto Sans TC",sans-serif;
+background:#020617;
 color:#fff;
-background:#000;
-background-image:
-linear-gradient(45deg,#111 25%,transparent 25%),
-linear-gradient(-45deg,#111 25%,transparent 25%),
-linear-gradient(45deg,transparent 75%,#111 75%),
-linear-gradient(-45deg,transparent 75%,#111 75%);
-background-size:40px 40px;
 }
 
-/* CTA */
-header{text-align:center;padding:80px 20px;}
+/* ===== HERO ===== */
+.hero{
+position:relative;
+text-align:center;
+padding:160px 20px 110px;
+overflow:hidden;
+}
 
-h1{font-size:30px;margin:10px 0;}
+/* 背景融合 */
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:url("https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png") center/cover no-repeat;
+opacity:0.25;
+filter:blur(10px) brightness(0.6);
+}
+
+/* 光暈 */
+.hero::after{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#00e0ff,transparent);
+filter:blur(140px);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+/* LOGO融合🔥 */
+.hero-logo{
+width:320px;
+position:relative;
+z-index:2;
+margin-bottom:20px;
+mix-blend-mode:screen;
+opacity:0.95;
+filter:drop-shadow(0 0 60px rgba(0,224,255,0.6));
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
+
+/* 店名 */
+.brand{
+font-size:34px;
+font-weight:900;
+letter-spacing:2px;
+margin-top:10px;
+z-index:2;
+position:relative;
+}
+
+/* 關鍵字 */
+.keywords{
+margin-top:12px;
+color:#94a3b8;
+font-size:15px;
+line-height:1.8;
+z-index:2;
+position:relative;
+}
+
+/* 標題 */
+.hero h1{
+font-size:28px;
+margin-top:20px;
+z-index:2;
+position:relative;
+}
 
 .highlight{color:#00e0ff;}
 
-.btn{
-display:inline-block;
-margin:8px;
-padding:14px 26px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
+/* 按鈕 */
+.actions{
+margin-top:30px;
+z-index:2;
+position:relative;
 }
 
-.call{background:#00e0ff;color:#000;}
-.line{background:#00c300;color:#fff;}
-.map{background:#fff;color:#000;}
+.btn{
+display:inline-block;
+margin:10px;
+padding:14px 26px;
+border-radius:999px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
 
+.call{
+background:linear-gradient(90deg,#00e0ff,#3b82f6);
+color:#000;
+box-shadow:0 0 25px rgba(0,224,255,0.6);
+}
+
+.line{background:#00c300;color:#fff;}
+.map{border:1px solid #334155;color:#cbd5f5;}
+
+.btn:hover{transform:translateY(-3px);}
+
+/* SECTION */
 section{
-padding:50px 20px;
+padding:80px 20px;
 max-width:1000px;
 margin:auto;
 }
 
-h2{
-border-left:4px solid #00e0ff;
-padding-left:10px;
+h2{font-size:28px;margin-bottom:20px;}
+
+/* 卡片 */
+.card{
+background:rgba(255,255,255,0.03);
+padding:20px;
+border-radius:16px;
+margin:12px 0;
+border:1px solid rgba(255,255,255,0.08);
 }
 
-/* 評論 */
-.review{
-background:#111;
-padding:15px;
-border-radius:10px;
-margin:10px 0;
-}
-
-/* 假地圖 */
-.map-box{
-height:260px;
-border-radius:12px;
-background:linear-gradient(135deg,#111,#000);
+/* ⭐ 評價卡升級🔥 */
+.map-review{
 display:flex;
+justify-content:space-between;
 align-items:center;
-justify-content:center;
-flex-direction:column;
+padding:22px;
+border-radius:18px;
+background:linear-gradient(135deg,#020617,#0f172a);
+border:1px solid rgba(255,255,255,0.08);
+margin-top:25px;
+transition:0.3s;
+}
+
+.map-review:hover{
+transform:translateY(-5px) scale(1.01);
 box-shadow:0 0 25px rgba(0,224,255,0.2);
+}
+
+.map-review .title{
+font-size:18px;
+font-weight:600;
+}
+
+.map-review .sub{
+font-size:14px;
+color:#94a3b8;
+margin-top:6px;
+}
+
+/* 動畫 */
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* 地圖 */
+.map-box{
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 0 40px rgba(0,224,255,0.2);
 }
 
 /* 浮動 */
 .floating{
 position:fixed;
 right:20px;
-padding:15px;
+padding:14px 18px;
 border-radius:50px;
 font-weight:bold;
 }
@@ -89,58 +205,66 @@ font-weight:bold;
 
 <body>
 
-<!-- CTA -->
-<header>
+<!-- HERO -->
+<header class="hero">
+
+<img src="https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png" class="hero-logo">
+
+<div class="brand">DS汽車安卓影音科技</div>
+
+<div class="keywords">
+安卓機、360環景、汽車音響專業安裝、台中安卓機推薦、360環景推薦、<br>
+衛星導航、行車記錄器、測速器、CarPlay
+</div>
 
 <h1>您的車，不該再忍了</h1>
-
 <p class="highlight">卡頓｜導航難用｜倒車死角</p>
 
-<p>🚗 安卓車機｜🎥 360環景｜🍎 CarPlay</p>
-
-<p>⭐ 高評價安裝</p>
-
+<div class="actions">
 <a href="tel:0963586591" class="btn call">📞 立即預約</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" class="btn line">LINE詢問</a>
-<a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" class="btn map">📍 立即導航</a>
+<a href="https://maps.app.goo.gl/MsaRfqfvMFTqi8bD8" class="btn map">📍 立即導航</a>
+</div>
 
 </header>
 
-<!-- 評論 -->
-<section>
+<!-- 評價 -->
+<section class="reveal">
+<h2>⭐ 真實評價</h2>
 
-<h2>⭐ Google評價</h2>
+<div class="card">⭐ 裝完真的差很多，早知道早來</div>
+<div class="card">⭐ 操作順到像新車</div>
+<div class="card">⭐ 老闆很專業，價格透明</div>
 
-<div class="review">⭐ 裝完差很多，早該來</div>
-<div class="review">⭐ 畫面順到不行</div>
-<div class="review">⭐ 價格透明不亂報</div>
-
-<a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" class="btn map">
-👉 查看更多評論
+<a href="https://maps.app.goo.gl/zZPRHJ16SWdRjyUi7" style="text-decoration:none;">
+<div class="map-review">
+  <div>
+    <div class="title">探索更多車主真實回饋</div>
+    <div class="sub">即刻查看五星評價與安裝體驗 ✨</div>
+  </div>
+  <div>➜</div>
+</div>
 </a>
 
 </section>
 
-<!-- 店面位置（最終穩定版） -->
-<section>
-
+<!-- 地圖 -->
+<section class="reveal">
 <h2>📍 店面位置</h2>
 
-<a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技">
-
 <div class="map-box">
-
-<div style="font-size:42px;">📍</div>
-<div style="margin-top:10px;">點擊開啟導航</div>
-<div style="font-size:14px;color:#aaa;">DS汽車安卓影音科技</div>
-
+<iframe
+src="https://www.google.com/maps?q=DS汽車安卓影音科技&output=embed"
+width="100%"
+height="320"
+style="border:0;"
+loading="lazy">
+</iframe>
 </div>
 
-</a>
+<br>
 
-<br><br>
-
-<a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" class="btn map">
+<a href="https://maps.app.goo.gl/MsaRfqfvMFTqi8bD8" class="btn map">
 📍 開啟導航
 </a>
 
@@ -149,6 +273,19 @@ font-weight:bold;
 <!-- 浮動 -->
 <a href="tel:0963586591" class="floating f1">📞</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" class="floating f2">LINE</a>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
