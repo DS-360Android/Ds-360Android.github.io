@@ -14,8 +14,6 @@ margin:0;
 font-family:"Noto Sans TC",sans-serif;
 color:#fff;
 background-color:#000;
-
-/* 卡夢紋 */
 background-image:
 linear-gradient(45deg,#111 25%,transparent 25%),
 linear-gradient(-45deg,#111 25%,transparent 25%),
@@ -55,14 +53,14 @@ position:relative;
 z-index:1;
 }
 
-header{text-align:center;padding:90px 20px;}
+header{text-align:center;padding:80px 20px;}
 
 .logo{
 width:180px;
 filter:drop-shadow(0 0 25px #00e0ff);
 }
 
-h1{font-size:34px;margin:10px 0;}
+h1{font-size:32px;margin:10px 0;}
 
 .highlight{
 color:#00e0ff;
@@ -89,7 +87,7 @@ box-shadow:0 0 20px rgba(0,224,255,0.6);
 .map{background:#fff;color:#000;}
 
 section{
-padding:60px 20px;
+padding:50px 20px;
 max-width:1100px;
 margin:auto;
 }
@@ -104,25 +102,15 @@ background:#111;
 padding:15px;
 border-radius:10px;
 margin:10px 0;
+border:1px solid rgba(255,255,255,0.05);
 }
 
-/* 假地圖卡片 */
-.map-card{
+/* 地圖 */
+iframe{
+width:100%;
 height:260px;
 border-radius:12px;
-background:linear-gradient(135deg,#111,#000);
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-border:1px solid rgba(0,224,255,0.2);
-box-shadow:0 0 30px rgba(0,224,255,0.15);
-transition:0.3s;
-}
-
-.map-card:hover{
-transform:scale(1.02);
-box-shadow:0 0 40px rgba(0,224,255,0.3);
+border:0;
 }
 
 /* 浮動按鈕 */
@@ -142,6 +130,7 @@ font-weight:bold;
 
 <body>
 
+<!-- 🔥 CTA 第一屏 -->
 <header>
 <img src="78b9c7f0-fa05-4463-a15f-fa3319af97cd.png" class="logo">
 
@@ -155,14 +144,15 @@ font-weight:bold;
 
 <a href="tel:0963586591" class="btn call">📞 立即預約</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" target="_blank" class="btn line">💬 LINE詢問</a>
-
 <a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" target="_blank" class="btn map">
-📍 查看店家
+📍 立即導航
 </a>
 </header>
 
+<!-- ⭐ 評價 -->
 <section>
 <h2>⭐ Google真實評價</h2>
+
 <div class="review">⭐ 裝完差很多，早該來</div>
 <div class="review">⭐ 畫面順到不行</div>
 <div class="review">⭐ 價格透明不亂報</div>
@@ -172,16 +162,14 @@ font-weight:bold;
 </a>
 </section>
 
+<!-- 📍 真地圖（不會被擋） -->
 <section>
 <h2>📍 店面位置</h2>
 
-<a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" target="_blank" style="text-decoration:none;">
-<div class="map-card">
-<div style="font-size:40px;">📍</div>
-<div style="margin-top:10px;font-size:18px;">點擊開啟導航</div>
-<div style="font-size:14px;color:#aaa;">DS汽車安卓影音科技</div>
-</div>
-</a>
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14562.96041140551!2d120.640!3d24.182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s台中市西屯區福上巷214弄55號!5e0!3m2!1szh-TW!2stw!4v1700000000000" 
+loading="lazy">
+</iframe>
 
 <br><br>
 
@@ -190,6 +178,7 @@ font-weight:bold;
 </a>
 </section>
 
+<!-- 浮動 -->
 <a href="tel:0963586591" class="floating f1">📞</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" target="_blank" class="floating f2">LINE</a>
 
