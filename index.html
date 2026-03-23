@@ -24,12 +24,12 @@ padding:160px 20px 110px;
 overflow:hidden;
 }
 
-/* 背景融合 */
+/* 背景 */
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
-background:url("https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png") center/cover no-repeat;
+background:url("https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%88005_59_29.png") center/cover no-repeat;
 opacity:0.25;
 filter:blur(10px) brightness(0.6);
 }
@@ -47,7 +47,7 @@ left:50%;
 transform:translate(-50%,-50%);
 }
 
-/* LOGO融合🔥 */
+/* LOGO（融合） */
 .hero-logo{
 width:320px;
 position:relative;
@@ -65,42 +65,33 @@ animation:float 5s ease-in-out infinite;
 100%{transform:translateY(0);}
 }
 
-/* 店名 */
+/* 店名（修正一排🔥） */
 .brand{
-font-size:34px;
+font-size:clamp(22px,5vw,28px);
 font-weight:900;
-letter-spacing:2px;
-margin-top:10px;
-z-index:2;
-position:relative;
+letter-spacing:1px;
+white-space:nowrap;
+text-shadow:0 0 12px rgba(0,224,255,0.3);
 }
 
 /* 關鍵字 */
 .keywords{
 margin-top:12px;
 color:#94a3b8;
-font-size:15px;
+font-size:14px;
 line-height:1.8;
-z-index:2;
-position:relative;
 }
 
 /* 標題 */
 .hero h1{
-font-size:28px;
+font-size:26px;
 margin-top:20px;
-z-index:2;
-position:relative;
 }
 
 .highlight{color:#00e0ff;}
 
 /* 按鈕 */
-.actions{
-margin-top:30px;
-z-index:2;
-position:relative;
-}
+.actions{margin-top:30px;}
 
 .btn{
 display:inline-block;
@@ -130,7 +121,7 @@ max-width:1000px;
 margin:auto;
 }
 
-h2{font-size:28px;margin-bottom:20px;}
+h2{font-size:26px;margin-bottom:20px;}
 
 /* 卡片 */
 .card{
@@ -141,7 +132,7 @@ margin:12px 0;
 border:1px solid rgba(255,255,255,0.08);
 }
 
-/* ⭐ 評價卡升級🔥 */
+/* 評價卡升級 */
 .map-review{
 display:flex;
 justify-content:space-between;
@@ -155,17 +146,17 @@ transition:0.3s;
 }
 
 .map-review:hover{
-transform:translateY(-5px) scale(1.01);
+transform:translateY(-5px);
 box-shadow:0 0 25px rgba(0,224,255,0.2);
 }
 
 .map-review .title{
-font-size:18px;
+font-size:17px;
 font-weight:600;
 }
 
 .map-review .sub{
-font-size:14px;
+font-size:13px;
 color:#94a3b8;
 margin-top:6px;
 }
@@ -208,7 +199,7 @@ font-weight:bold;
 <!-- HERO -->
 <header class="hero">
 
-<img src="https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png" class="hero-logo">
+<img src="https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%88005_59_29.png" class="hero-logo">
 
 <div class="brand">DS汽車安卓影音科技</div>
 
@@ -274,6 +265,7 @@ loading="lazy">
 <a href="tel:0963586591" class="floating f1">📞</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" class="floating f2">LINE</a>
 
+<!-- 動畫 -->
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
