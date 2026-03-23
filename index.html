@@ -74,8 +74,6 @@ z-index:2;
 
 .highlight{
 color:#22d3ee;
-position:relative;
-z-index:2;
 }
 
 .actions{
@@ -108,6 +106,80 @@ border:1px solid #64748b;
 color:#fff;
 }
 
+/* ===== ABOUT ===== */
+.about-section{
+padding:100px 20px;
+background:linear-gradient(to bottom,#020617,#020617,#030a1a);
+}
+
+.about-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.about-left{
+flex:1;
+min-width:260px;
+}
+
+.about-left h2{
+font-size:14px;
+letter-spacing:3px;
+color:#38bdf8;
+}
+
+.about-left h3{
+font-size:28px;
+margin:10px 0;
+font-weight:900;
+}
+
+.about-line{
+width:60px;
+height:3px;
+background:#38bdf8;
+margin:15px 0;
+}
+
+.about-left p{
+color:#cbd5f5;
+line-height:1.8;
+}
+
+.about-right{
+flex:1;
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.about-card{
+background:rgba(15,23,42,0.8);
+padding:18px;
+border-radius:12px;
+border:1px solid rgba(56,189,248,0.2);
+transition:0.3s;
+}
+
+.about-card:hover{
+transform:translateY(-3px);
+border-color:#38bdf8;
+}
+
+.about-card h4{
+margin:0 0 5px;
+}
+
+.about-card p{
+margin:0;
+color:#94a3b8;
+font-size:14px;
+}
+
 /* ===== SECTION ===== */
 section{
 padding:80px 20px;
@@ -120,14 +192,7 @@ font-size:24px;
 margin-bottom:20px;
 }
 
-.card{
-background:#0f172a;
-padding:20px;
-border-radius:12px;
-line-height:1.8;
-color:#cbd5f5;
-}
-
+/* 評價 */
 .review-card{
 background:#0f172a;
 padding:18px;
@@ -150,12 +215,14 @@ text-align:center;
 font-weight:bold;
 }
 
+/* 地圖 */
 .map-box{
 border-radius:12px;
 overflow:hidden;
 margin-top:10px;
 }
 
+/* 浮動 */
 .floating{
 position:fixed;
 right:20px;
@@ -194,22 +261,42 @@ font-weight:bold;
 
 </header>
 
-<!-- 公司簡介 -->
+<!-- ABOUT -->
 
-<section>
-<h2>📌 關於我們</h2>
+<section class="about-section">
 
-<div class="card">
-我們專注於汽車安卓影音系統升級，從安卓主機、360環景到音響優化，
-每一台車都依照車型與使用需求量身調整。
+<div class="about-container">
 
-在這裡，你不會遇到亂報價，也不會被強迫升級不需要的配件，
-我們重視的是「實用、穩定、長期使用」。
+<div class="about-left">
+<h2>ABOUT</h2>
+<h3>DS汽車安卓影音科技</h3>
+<div class="about-line"></div>
 
-施工細節、線路整理、系統穩定度，都是我們最在意的地方。
+<p>
+專注於汽車安卓影音整合升級<br>
+從系統、硬體到施工細節<br>
+打造穩定、流暢的車用體驗
+</p>
+</div>
 
-很多客人一開始只是想解決卡頓，
-最後卻發現——整台車像重生一樣。
+<div class="about-right">
+
+<div class="about-card">
+<h4>系統整合</h4>
+<p>安卓主機｜CarPlay｜導航系統</p>
+</div>
+
+<div class="about-card">
+<h4>安全升級</h4>
+<p>360環景｜行車記錄器｜測速系統</p>
+</div>
+
+<div class="about-card">
+<h4>施工品質</h4>
+<p>專業配線｜細節收整｜穩定優化</p>
+</div>
+
+</div>
 
 </div>
 
