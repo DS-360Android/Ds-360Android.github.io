@@ -47,7 +47,6 @@ z-index:0;
 100%{transform:rotate(360deg);}
 }
 
-/* 內容層 */
 header, section, .floating{
 position:relative;
 z-index:1;
@@ -105,12 +104,33 @@ margin:10px 0;
 border:1px solid rgba(255,255,255,0.05);
 }
 
-/* 地圖 */
-iframe{
-width:100%;
+/* 地圖卡片 */
+.map-card{
 height:260px;
 border-radius:12px;
-border:0;
+overflow:hidden;
+position:relative;
+box-shadow:0 0 30px rgba(0,224,255,0.2);
+transition:0.3s;
+}
+
+.map-card:hover{
+transform:scale(1.02);
+box-shadow:0 0 40px rgba(0,224,255,0.4);
+}
+
+.map-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+color:#fff;
 }
 
 /* 浮動按鈕 */
@@ -130,7 +150,7 @@ font-weight:bold;
 
 <body>
 
-<!-- 🔥 CTA 第一屏 -->
+<!-- 🔥 CTA -->
 <header>
 <img src="78b9c7f0-fa05-4463-a15f-fa3319af97cd.png" class="logo">
 
@@ -149,7 +169,7 @@ font-weight:bold;
 </a>
 </header>
 
-<!-- ⭐ 評價 -->
+<!-- ⭐ 評論 -->
 <section>
 <h2>⭐ Google真實評價</h2>
 
@@ -162,20 +182,33 @@ font-weight:bold;
 </a>
 </section>
 
-<!-- 📍 真地圖（不會被擋） -->
+<!-- 📍 地圖 -->
 <section>
 <h2>📍 店面位置</h2>
 
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14562.96041140551!2d120.640!3d24.182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s台中市西屯區福上巷214弄55號!5e0!3m2!1szh-TW!2stw!4v1700000000000" 
-loading="lazy">
-</iframe>
+<a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" target="_blank">
+
+<div class="map-card">
+
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=台中市西屯區福上巷214弄55號&zoom=17&size=800x400&markers=color:red|台中市西屯區福上巷214弄55號"
+style="width:100%;height:100%;object-fit:cover;">
+
+<div class="map-overlay">
+<div style="font-size:36px;">📍</div>
+<div style="margin-top:10px;">點擊開啟導航</div>
+<div style="font-size:14px;color:#ccc;">DS汽車安卓影音科技</div>
+</div>
+
+</div>
+
+</a>
 
 <br><br>
 
 <a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" target="_blank" class="btn map">
 📍 開啟導航
 </a>
+
 </section>
 
 <!-- 浮動 -->
