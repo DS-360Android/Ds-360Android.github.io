@@ -22,16 +22,19 @@ position:relative;
 text-align:center;
 padding:160px 20px 110px;
 overflow:hidden;
+z-index:1;
 }
 
-/* 背景 */
+/* 背景（已改CDN🔥） */
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
-background:url("https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%88005_59_29.png") center/cover no-repeat;
+background:url("https://cdn.jsdelivr.net/gh/DS-360Android/Ds-360Android.github.io@main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png") center/cover no-repeat;
 opacity:0.25;
 filter:blur(10px) brightness(0.6);
+z-index:0;
+pointer-events:none;
 }
 
 /* 光暈 */
@@ -45,17 +48,24 @@ filter:blur(140px);
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
+z-index:0;
+pointer-events:none;
 }
 
-/* LOGO（融合） */
+/* LOGO（修正破圖＋融合） */
 .hero-logo{
 width:320px;
+max-width:90%;
+height:auto;
 position:relative;
-z-index:2;
+z-index:5;
 margin-bottom:20px;
+
 mix-blend-mode:screen;
 opacity:0.95;
+
 filter:drop-shadow(0 0 60px rgba(0,224,255,0.6));
+
 animation:float 5s ease-in-out infinite;
 }
 
@@ -65,13 +75,15 @@ animation:float 5s ease-in-out infinite;
 100%{transform:translateY(0);}
 }
 
-/* 店名（修正一排🔥） */
+/* 店名（強制一排） */
 .brand{
 font-size:clamp(22px,5vw,28px);
 font-weight:900;
 letter-spacing:1px;
 white-space:nowrap;
 text-shadow:0 0 12px rgba(0,224,255,0.3);
+position:relative;
+z-index:5;
 }
 
 /* 關鍵字 */
@@ -80,18 +92,30 @@ margin-top:12px;
 color:#94a3b8;
 font-size:14px;
 line-height:1.8;
+position:relative;
+z-index:5;
 }
 
 /* 標題 */
 .hero h1{
 font-size:26px;
 margin-top:20px;
+position:relative;
+z-index:5;
 }
 
-.highlight{color:#00e0ff;}
+.highlight{
+color:#00e0ff;
+position:relative;
+z-index:5;
+}
 
-/* 按鈕 */
-.actions{margin-top:30px;}
+/* 按鈕（可點修正🔥） */
+.actions{
+margin-top:30px;
+position:relative;
+z-index:10;
+}
 
 .btn{
 display:inline-block;
@@ -100,7 +124,12 @@ padding:14px 26px;
 border-radius:999px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
+cursor:pointer;
+transition:0.25s;
+}
+
+.btn:active{
+transform:scale(0.96);
 }
 
 .call{
@@ -111,8 +140,6 @@ box-shadow:0 0 25px rgba(0,224,255,0.6);
 
 .line{background:#00c300;color:#fff;}
 .map{border:1px solid #334155;color:#cbd5f5;}
-
-.btn:hover{transform:translateY(-3px);}
 
 /* SECTION */
 section{
@@ -132,7 +159,7 @@ margin:12px 0;
 border:1px solid rgba(255,255,255,0.08);
 }
 
-/* 評價卡升級 */
+/* 評價卡 */
 .map-review{
 display:flex;
 justify-content:space-between;
@@ -187,6 +214,7 @@ right:20px;
 padding:14px 18px;
 border-radius:50px;
 font-weight:bold;
+z-index:20;
 }
 
 .f1{bottom:20px;background:#00e0ff;color:#000;}
@@ -199,7 +227,11 @@ font-weight:bold;
 <!-- HERO -->
 <header class="hero">
 
-<img src="https://raw.githubusercontent.com/DS-360Android/Ds-360Android.github.io/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%88005_59_29.png" class="hero-logo">
+<img 
+src="https://cdn.jsdelivr.net/gh/DS-360Android/Ds-360Android.github.io@main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png"
+class="hero-logo"
+onerror="this.style.display='none';"
+>
 
 <div class="brand">DS汽車安卓影音科技</div>
 
@@ -265,7 +297,6 @@ loading="lazy">
 <a href="tel:0963586591" class="floating f1">📞</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" class="floating f2">LINE</a>
 
-<!-- 動畫 -->
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
