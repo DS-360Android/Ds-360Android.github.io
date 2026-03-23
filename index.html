@@ -14,18 +14,47 @@ margin:0;
 font-family:"Noto Sans TC",sans-serif;
 color:#fff;
 background-color:#000;
+
+/* 卡夢紋 */
 background-image:
 linear-gradient(45deg,#111 25%,transparent 25%),
 linear-gradient(-45deg,#111 25%,transparent 25%),
 linear-gradient(45deg,transparent 75%,#111 75%),
 linear-gradient(-45deg,transparent 75%,#111 75%);
 background-size:40px 40px;
+
+/* 背景動畫 */
 animation:moveBg 20s linear infinite;
 }
 
 @keyframes moveBg{
 0%{background-position:0 0,0 20px,20px -20px,-20px 0;}
 100%{background-position:80px 80px,80px 100px,100px 60px,60px 80px;}
+}
+
+/* 🔥 霓虹層（已修正不會蓋住） */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+top:-50%;
+left:-50%;
+background:radial-gradient(circle at center,rgba(0,224,255,0.08),transparent 60%);
+animation:neonMove 10s linear infinite;
+pointer-events:none;
+z-index:0;
+}
+
+@keyframes neonMove{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* 內容層往上 */
+header, section, .floating{
+position:relative;
+z-index:1;
 }
 
 header{text-align:center;padding:90px 20px;}
@@ -61,11 +90,23 @@ box-shadow:0 0 20px rgba(0,224,255,0.6);
 .line{background:#00c300;color:#fff;}
 .map{background:#fff;color:#000;}
 
-section{padding:60px 20px;max-width:1100px;margin:auto;}
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
 
-h2{border-left:4px solid #00e0ff;padding-left:10px;}
+h2{
+border-left:4px solid #00e0ff;
+padding-left:10px;
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px;}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
 
 .card{
 background:rgba(255,255,255,0.03);
@@ -81,11 +122,14 @@ border-radius:10px;
 margin:10px 0;
 }
 
+/* 🔥 地圖確保在最上層 */
 iframe{
 width:100%;
 height:260px;
 border-radius:12px;
 border:0;
+position:relative;
+z-index:2;
 }
 
 .floating{
@@ -118,7 +162,7 @@ font-weight:bold;
 <a href="tel:0963586591" class="btn call">📞 立即預約</a>
 <a href="https://line.me/ti/p/n07a1cCF6i" target="_blank" class="btn line">💬 LINE詢問</a>
 
-<!-- ✅ 統一商家頁 -->
+<!-- ✅ 商家頁 -->
 <a href="https://www.google.com/maps/place/?q=DS汽車安卓影音科技" target="_blank" class="btn map">
 📍 查看店家
 </a>
@@ -138,7 +182,7 @@ font-weight:bold;
 <section>
 <h2>📍 店面位置</h2>
 
-<!-- ⚠️ iframe 只能用這種 -->
+<!-- ✅ 地圖正常顯示 -->
 <iframe src="https://www.google.com/maps?q=DS汽車安卓影音科技&output=embed"></iframe>
 
 <br><br>
