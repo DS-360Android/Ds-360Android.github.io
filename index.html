@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DS汽車安卓影音科技｜台中安卓機・360環景推薦</title>
+<title>DS汽車安卓影音科技｜台中安卓機推薦・360環景推薦</title>
 
 <style>
 body {
@@ -11,18 +11,17 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     background: radial-gradient(circle at center, #050505, #000);
     color: #fff;
-    overflow-x: hidden;
 }
 
-/* 背景電路動畫 */
+/* 背景動畫 */
 body::before {
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 200%;
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
     background: repeating-linear-gradient(
         45deg,
-        rgba(0,224,255,0.05) 0px,
+        rgba(0,224,255,0.05),
         rgba(0,224,255,0.05) 2px,
         transparent 2px,
         transparent 40px
@@ -30,102 +29,104 @@ body::before {
     animation: move 20s linear infinite;
 }
 @keyframes move {
-    from { transform: translate(0,0); }
-    to { transform: translate(-200px,-200px); }
+    from {transform: translate(0,0);}
+    to {transform: translate(-200px,-200px);}
 }
 
 header {
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
+    text-align:center;
+    padding:100px 20px;
 }
 
 .logo {
-    width: 200px;
+    width:200px;
     animation: float 3s ease-in-out infinite;
     filter: drop-shadow(0 0 20px #00e0ff);
 }
 @keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% {transform: translateY(-10px);}
 }
 
-h1 {
-    font-size: 36px;
-    margin-top: 20px;
-}
+h1 {font-size:36px;}
 
-.highlight {
-    color: #00e0ff;
-    font-weight: bold;
-}
+.highlight {color:#00e0ff;}
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 35px;
-    background: linear-gradient(135deg,#00e0ff,#0088cc);
-    color: #000;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 0 20px #00e0ff;
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 30px;
+    background:linear-gradient(135deg,#00e0ff,#0088cc);
+    color:#000;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 section {
-    padding: 70px 20px;
-    max-width: 1100px;
-    margin: auto;
+    padding:70px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
 h2 {
-    border-left: 5px solid #00e0ff;
-    padding-left: 12px;
+    border-left:5px solid #00e0ff;
+    padding-left:12px;
 }
 
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
-    gap: 20px;
-    margin-top: 30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:20px;
 }
 
 .card {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:12px;
+    transition:.3s;
 }
 .card:hover {
-    transform: scale(1.05);
-    background: rgba(0,224,255,0.15);
+    transform:scale(1.05);
+    background:rgba(0,224,255,0.15);
 }
 
 .review {
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
+    background:rgba(255,255,255,0.05);
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
 }
 
 .cta {
-    text-align: center;
-    background: linear-gradient(135deg,#00e0ff,#004466);
-    padding: 70px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#00e0ff,#004466);
+    padding:60px 20px;
 }
 
-.floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #00e0ff;
-    color: #000;
-    padding: 16px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 0 25px #00e0ff;
+/* 浮動按鈕 */
+.call-btn {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#00e0ff;
+    color:#000;
+    padding:15px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.line-btn {
+    position:fixed;
+    bottom:80px;
+    right:20px;
+    background:#00c300;
+    color:#fff;
+    padding:15px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
 }
 </style>
 </head>
@@ -133,55 +134,90 @@ h2 {
 <body>
 
 <header>
-    <img src="78b9c7f0-fa05-4463-a15f-fa3319af97cd.png" class="logo">
-    <h1>DS汽車安卓影音科技</h1>
-    <p class="highlight">台中安卓機・360環景・CarPlay升級專家</p>
-    <p>⭐ 4.9高評價（190則）</p>
-    <a class="btn" href="tel:0963586591">立即預約</a>
+<img src="78b9c7f0-fa05-4463-a15f-fa3319af97cd.png" class="logo">
+
+<h1>您的車，不該再忍了</h1>
+
+<p class="highlight">
+卡頓｜導航難用｜倒車看不清  
+這不是正常，是您的車需要來找我們
+</p>
+
+<p>🚗 安卓車機｜🎥 360環景｜🍎 CarPlay</p>
+
+<p>⭐ 4.9高評價（190則）</p>
+
+<a class="btn" href="tel:0963586591">📞 立即預約</a>
 </header>
 
 <section>
-    <h2>🚗 車還停在舊時代？</h2>
-    <p>導航卡、畫面頓、倒車看不清？</p>
-    <p class="highlight">你的車不是壞，是該升級了</p>
+<h2>⚠️ 你是不是也遇到這些？</h2>
+<p>❌ 螢幕卡頓</p>
+<p>❌ 倒車模糊</p>
+<p>❌ 導航難用</p>
+<p>❌ 手機不能同步</p>
+<p class="highlight">👉 設備該升級了</p>
 </section>
 
 <section>
-    <h2>🔧 核心服務</h2>
-    <div class="services">
-        <div class="card">📱 安卓車機升級</div>
-        <div class="card">🎥 360環景</div>
-        <div class="card">🍎 CarPlay</div>
-        <div class="card">🎬 行車記錄器</div>
-        <div class="card">🧭 衛星導航</div>
-        <div class="card">🚨 測速器</div>
-    </div>
+<h2>🚀 升級後的改變</h2>
+<div class="services">
+<div class="card">📱 滑順不卡</div>
+<div class="card">🎥 360環景</div>
+<div class="card">🍎 CarPlay</div>
+<div class="card">🎬 行車記錄器</div>
+<div class="card">🧭 導航精準</div>
+<div class="card">🚨 測速提醒</div>
+</div>
 </section>
 
 <section>
-    <h2>💬 客戶評價</h2>
-    <div class="review">⭐ 安裝細心，質感提升很多</div>
-    <div class="review">⭐ 畫面順暢不卡</div>
-    <div class="review">⭐ 價格透明，值得推薦</div>
+<h2>🔥 安裝前 vs 安裝後</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+<div class="card">❌ 安裝前：卡頓、死角多</div>
+<div class="card">✅ 安裝後：順暢、安全</div>
+</div>
 </section>
 
 <section>
-    <h2>📍 店面資訊</h2>
-    <p>台中市西屯區福上巷214弄55號</p>
-    <p>週二~週日 12:00（採預約制）</p>
-    <p>0963-586-591</p>
+<h2>🎥 安裝展示</h2>
+<iframe width="100%" height="250"
+src="https://www.youtube.com/embed/"
+style="border-radius:12px;border:0;"></iframe>
+</section>
 
-    <iframe src="https://www.google.com/maps?q=台中市西屯區福上巷214弄55號&output=embed"
-    width="100%" height="250" style="border-radius:12px;border:0;"></iframe>
+<section>
+<h2>💬 客戶評價</h2>
+<div class="review">⭐ 裝完真的差很多</div>
+<div class="review">⭐ 畫面超順</div>
+<div class="review">⭐ 價格實在</div>
+</section>
+
+<section>
+<h2>📍 店面資訊</h2>
+<p>台中市西屯區福上巷214弄55號</p>
+<p>週二~週日 12:00（採預約制）</p>
+<p>0963-586-591</p>
+
+<iframe src="https://www.google.com/maps?q=台中市西屯區福上巷214弄55號&output=embed"
+width="100%" height="250" style="border-radius:12px;border:0;"></iframe>
 </section>
 
 <section class="cta">
-    <h2>🚀 直接升級你的車</h2>
-    <p>每天都在開車，值得更好的體驗</p>
-    <a class="btn" href="tel:0963586591">立即預約</a>
+<h2>🚗 今天升級，明天舒服</h2>
+
+<a class="btn" href="tel:0963586591">📞 打電話</a>
+
+<br><br>
+
+<a class="btn" href="https://line.me/ti/p/n07a1cCF6i"
+style="background:#00c300;color:#fff;">
+💬 LINE詢問
+</a>
 </section>
 
-<a class="floating-btn" href="tel:0963586591">📞 打電話</a>
+<a href="tel:0963586591" class="call-btn">📞</a>
+<a href="https://line.me/ti/p/n07a1cCF6i" class="line-btn">LINE</a>
 
 </body>
 </html>
