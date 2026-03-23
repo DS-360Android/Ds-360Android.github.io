@@ -13,7 +13,7 @@
 body{
 margin:0;
 font-family:"Noto Sans TC",sans-serif;
-background:#000;
+background:#020617;
 color:#fff;
 }
 
@@ -30,21 +30,22 @@ content:"";
 position:absolute;
 inset:0;
 background:url("https://cdn.jsdelivr.net/gh/DS-360Android/Ds-360Android.github.io@main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png") center/cover no-repeat;
-opacity:0.25;
+opacity:0.35;
 }
 
 .hero::after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(to bottom,rgba(0,0,0,0.7),#000);
+background:rgba(2,6,23,0.75);
 }
 
 .hero-logo{
 width:260px;
+max-width:90%;
 position:relative;
 z-index:2;
-filter:drop-shadow(0 0 20px rgba(212,175,55,0.6));
+filter:drop-shadow(0 0 15px rgba(0,224,255,0.5));
 }
 
 .brand{
@@ -57,24 +58,30 @@ z-index:2;
 
 .keywords{
 margin-top:10px;
-color:#aaa;
+color:#cbd5f5;
 font-size:14px;
+line-height:1.7;
 position:relative;
 z-index:2;
 }
 
 .hero h1{
-font-size:26px;
+font-size:24px;
 margin-top:20px;
 position:relative;
 z-index:2;
 }
 
 .highlight{
-color:#d4af37;
+color:#22d3ee;
 }
 
-/* 按鈕 */
+.actions{
+margin-top:30px;
+position:relative;
+z-index:3;
+}
+
 .btn{
 display:inline-block;
 margin:10px;
@@ -85,7 +92,7 @@ font-weight:bold;
 }
 
 .call{
-background:#d4af37;
+background:#38bdf8;
 color:#000;
 }
 
@@ -95,14 +102,14 @@ color:#fff;
 }
 
 .map{
-border:1px solid #555;
+border:1px solid #64748b;
 color:#fff;
 }
 
 /* ===== ABOUT ===== */
 .about-section{
 padding:100px 20px;
-background:#000;
+background:linear-gradient(to bottom,#020617,#020617,#030a1a);
 }
 
 .about-container{
@@ -111,107 +118,108 @@ margin:auto;
 display:flex;
 gap:40px;
 flex-wrap:wrap;
+align-items:center;
 }
 
 .about-left{
 flex:1;
+min-width:260px;
 }
 
 .about-left h2{
-color:#d4af37;
-letter-spacing:3px;
 font-size:14px;
+letter-spacing:3px;
+color:#38bdf8;
 }
 
 .about-left h3{
 font-size:28px;
+margin:10px 0;
 font-weight:900;
 }
 
 .about-line{
 width:60px;
-height:2px;
-background:#d4af37;
+height:3px;
+background:#38bdf8;
 margin:15px 0;
 }
 
 .about-left p{
-color:#bbb;
+color:#cbd5f5;
 line-height:1.8;
 }
 
 .about-right{
 flex:1;
 display:grid;
+grid-template-columns:1fr;
 gap:15px;
 }
 
 .about-card{
-background:#0a0a0a;
-border:1px solid rgba(212,175,55,0.2);
+background:rgba(15,23,42,0.8);
 padding:18px;
 border-radius:12px;
+border:1px solid rgba(56,189,248,0.2);
+transition:0.3s;
+}
+
+.about-card:hover{
+transform:translateY(-3px);
+border-color:#38bdf8;
 }
 
 .about-card h4{
-color:#d4af37;
 margin:0 0 5px;
 }
 
 .about-card p{
-color:#999;
+margin:0;
+color:#94a3b8;
+font-size:14px;
 }
 
-/* ===== LOGO牆 ===== */
-.logo-wall{
+/* ===== SECTION ===== */
+section{
 padding:80px 20px;
-text-align:center;
-}
-
-.logo-wall h2{
-margin-bottom:30px;
-}
-
-.logo-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-max-width:800px;
+max-width:900px;
 margin:auto;
 }
 
-.logo-item{
-border:1px solid rgba(212,175,55,0.2);
-padding:15px;
-border-radius:10px;
-color:#ccc;
+h2{
+font-size:24px;
+margin-bottom:20px;
 }
 
-/* ===== 評價 ===== */
+/* 評價 */
 .review-card{
-background:#0a0a0a;
+background:#0f172a;
 padding:18px;
 border-radius:12px;
 margin:10px 0;
 }
 
 .stars{
-color:#d4af37;
+color:#facc15;
+margin-bottom:6px;
 }
 
 .review-cta{
-background:#d4af37;
-color:#000;
+margin-top:20px;
 padding:18px;
 border-radius:12px;
+background:#38bdf8;
+color:#000;
 text-align:center;
-margin-top:20px;
+font-weight:bold;
 }
 
-/* ===== 地圖 ===== */
+/* 地圖 */
 .map-box{
 border-radius:12px;
 overflow:hidden;
+margin-top:10px;
 }
 
 /* 浮動 */
@@ -223,7 +231,7 @@ border-radius:50px;
 font-weight:bold;
 }
 
-.f1{bottom:20px;background:#d4af37;color:#000;}
+.f1{bottom:20px;background:#38bdf8;color:#000;}
 .f2{bottom:80px;background:#00c300;color:#fff;}
 </style>
 
@@ -232,65 +240,64 @@ font-weight:bold;
 <body>
 
 <header class="hero">
+
 <img src="https://cdn.jsdelivr.net/gh/DS-360Android/Ds-360Android.github.io@main/ChatGPT%20Image%202026%E5%B9%B43%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8805_59_29.png" class="hero-logo">
 
 <div class="brand">DS汽車安卓影音科技</div>
-<div class="keywords">安卓機｜360環景｜CarPlay｜音響升級</div>
 
-<h1>讓你的車，升級成精品座艙</h1>
-<p class="highlight">流暢｜安全｜質感全面進化</p>
-
-<div>
-<a href="tel:0963586591" class="btn call">📞 預約安裝</a>
-<a href="https://line.me/ti/p/n07a1cCF6i" class="btn line">LINE詢問</a>
+<div class="keywords">
+安卓機、360環景、汽車音響安裝、台中安卓機推薦、<br>
+衛星導航、行車記錄器、測速器、CarPlay
 </div>
+
+<h1>您的車，不該再忍了</h1>
+<p class="highlight">卡頓｜導航難用｜倒車死角</p>
+
+<div class="actions">
+<a href="tel:0963586591" class="btn call">📞 立即預約</a>
+<a href="https://line.me/ti/p/n07a1cCF6i" class="btn line">LINE詢問</a>
+<a href="https://maps.app.goo.gl/MsaRfqfvMFTqi8bD8" class="btn map">📍 立即導航</a>
+</div>
+
 </header>
 
 <!-- ABOUT -->
 
 <section class="about-section">
+
 <div class="about-container">
 
 <div class="about-left">
-<h2>EST.2013</h2>
+<h2>ABOUT</h2>
 <h3>DS汽車安卓影音科技</h3>
 <div class="about-line"></div>
 
 <p>
-深耕車載智慧科技領域<br>
-專精360環景與安卓系統整合<br>
-打造穩定、安全、流暢的駕駛體驗
+專注於汽車安卓影音整合升級<br>
+從系統、硬體到施工細節<br>
+打造穩定、流暢的車用體驗
 </p>
 </div>
 
 <div class="about-right">
-<div class="about-card"><h4>技術整合</h4><p>高精度影像融合｜即時顯示</p></div>
-<div class="about-card"><h4>施工品質</h4><p>原廠級標準｜細節收整</p></div>
-<div class="about-card"><h4>售後服務</h4><p>專業維修｜完整保固</p></div>
+
+<div class="about-card">
+<h4>系統整合</h4>
+<p>安卓主機｜CarPlay｜導航系統</p>
+</div>
+
+<div class="about-card">
+<h4>安全升級</h4>
+<p>360環景｜行車記錄器｜測速系統</p>
+</div>
+
+<div class="about-card">
+<h4>施工品質</h4>
+<p>專業配線｜細節收整｜穩定優化</p>
 </div>
 
 </div>
-</section>
 
-<!-- LOGO牆 -->
-
-<section class="logo-wall">
-<h2>🚗 熱門車款支援</h2>
-
-<div class="logo-grid">
-<div class="logo-item">TOYOTA</div>
-<div class="logo-item">HONDA</div>
-<div class="logo-item">NISSAN</div>
-<div class="logo-item">MAZDA</div>
-<div class="logo-item">MITSUBISHI</div>
-<div class="logo-item">FORD</div>
-
-<div class="logo-item">BMW</div>
-<div class="logo-item">BENZ</div>
-<div class="logo-item">AUDI</div>
-<div class="logo-item">LEXUS</div>
-<div class="logo-item">PORSCHE</div>
-<div class="logo-item">TESLA</div>
 </div>
 
 </section>
@@ -300,15 +307,39 @@ font-weight:bold;
 <section>
 <h2>⭐ 車主真實評價</h2>
 
-<div class="review-card"><div class="stars">★★★★★</div>裝完像換一台車</div>
-<div class="review-card"><div class="stars">★★★★★</div>360真的超好用</div>
-<div class="review-card"><div class="stars">★★★★★</div>施工很細</div>
-<div class="review-card"><div class="stars">★★★★★</div>價格透明</div>
-<div class="review-card"><div class="stars">★★★★★</div>朋友推薦很值得</div>
+<div class="review-card">
+<div class="stars">★★★★★</div>
+原本導航超卡，還會當機，裝完直接順到像新車，完全回不去了
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+倒車死角真的很煩，裝360之後停車變超輕鬆，新手也敢開了
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+老闆很實在，價格講清楚不亂加，施工也很細心，線路收得很漂亮
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+原本音響很悶，升級後整個層次拉開，開車變享受
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+朋友推薦來的，結果真的比預期還好，早知道早點來裝
+</div>
 
 <div class="review-cta">
-100+車主已升級 🚗<br>下一個就是你
+已經有超過 <b>100+ 台中車主</b> 完成升級<br><br>
+👉 下一個順暢開車的，就是你
 </div>
+
+<a href="https://maps.app.goo.gl/zZPRHJ16SWdRjyUi7">
+<div class="btn map" style="margin-top:15px;">查看 Google 完整評價</div>
+</a>
 
 </section>
 
@@ -320,6 +351,11 @@ font-weight:bold;
 <div class="map-box">
 <iframe src="https://www.google.com/maps?q=DS汽車安卓影音科技&output=embed" width="100%" height="300"></iframe>
 </div>
+
+<br>
+
+<a href="https://maps.app.goo.gl/MsaRfqfvMFTqi8bD8" class="btn map">📍 開啟導航</a>
+
 </section>
 
 <a href="tel:0963586591" class="floating f1">📞</a> <a href="https://line.me/ti/p/n07a1cCF6i" class="floating f2">LINE</a>
